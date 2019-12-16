@@ -1,14 +1,5 @@
 class Cart::ProductsController < ApplicationController
     
-  def validate_params 
-    permitted_params.values.each do |p|
-      unless /\A[-+]?\d+\z/ === p
-        return false
-      end
-    end
-    return true
-  end
- 
   def create
 
     if permitted_params[:product_id].nil?  
@@ -29,7 +20,7 @@ class Cart::ProductsController < ApplicationController
     
     else
       
-      if validate_params
+      if Validation.validate_params(permitted_params)
         
         @product = Product.find(permitted_params[:product_id])
 
@@ -48,7 +39,9 @@ class Cart::ProductsController < ApplicationController
   end
 
   def destroy
-    if validate_params
+    
+    if Validation.validate_params(permitted_params)
+
       @product = Product.find(permitted_params[:id])
     
       delete_product @product
