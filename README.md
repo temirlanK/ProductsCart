@@ -19,3 +19,5 @@
 * Get Cart Info:              GET    /api/cart(.:format)              carts#cart_info
 
 * ErrorMessages Module - lib/error_messages.rb
+
+* Cart Management methods are inside application_controller.rb
