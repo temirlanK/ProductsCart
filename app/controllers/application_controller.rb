@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   include ErrorMessages
 
-  
+
   def add_product product, quantity
     @sum = product.price * quantity
     
@@ -37,7 +37,7 @@ class ApplicationController < ActionController::API
     
     unless products.pluck(:id).include?(product.id)
       
-      render :json => "Такого продукта нет в системе", :status => 400
+      render :json => not_existing_product_error, :status => 400
     
     else
       @product = products.select{|x| x[:id] == product.id } 

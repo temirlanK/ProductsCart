@@ -39,8 +39,9 @@ class Cart::ProductsController < ApplicationController
        
       else 
 
-        render :json => "Error", :status => 400 
+        render :json => numerical_parameter_error, :status => 400 
 
+      
       end
     end
 
@@ -53,7 +54,7 @@ class Cart::ProductsController < ApplicationController
       delete_product @product
     else
 
-      render :json => "Error", :status => 400 
+      render :json => numerical_parameter_error, :status => 400 
 
     end
   end

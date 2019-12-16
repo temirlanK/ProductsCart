@@ -19,4 +19,12 @@ module ErrorMessages
     }
     @error[:error][:params][num]
   end
+
+  def numerical_parameter_error
+    {:error => "Parameter is not numerical"}
+  end
+
+  def not_existing_product_error 
+    {:error => "Такого продукта нет в системе"}
+  end
 end
