@@ -13,7 +13,7 @@
   Run Server in a development mode via "rails s"
   
 * API Specification: Routing (run rails routes)
-  List of Products:           GET    /api/products(.:format)          products#index
-  Add Product to Cart:        POST   /api/cart/products(.:format)     cart/products#create
-  Delete Product from Cart:   DELETE /api/cart/products/:id(.:format) cart/products#destroy
-  Get Cart Info:              GET    /api/cart(.:format)              carts#cart_info
+* List of Products:           GET    /api/products(.:format)          products#index
+* Add Product to Cart:        POST   /api/cart/products(.:format)     cart/products#create
+* Delete Product from Cart:   DELETE /api/cart/products/:id(.:format) cart/products#destroy
+* Get Cart Info:              GET    /api/cart(.:format)              carts#cart_info
