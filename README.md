@@ -17,3 +17,5 @@
 * Add Product to Cart:        POST   /api/cart/products(.:format)     cart/products#create
 * Delete Product from Cart:   DELETE /api/cart/products/:id(.:format) cart/products#destroy
 * Get Cart Info:              GET    /api/cart(.:format)              carts#cart_info
+
+* ErrorMessages Module - lib/error_messages.rb
